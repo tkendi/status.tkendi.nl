@@ -1,6 +1,17 @@
-import '@/styles/globals.css'
-import type { AppProps } from 'next/app'
+import { AppProps } from 'next/app';
+import { ThemeProvider } from 'next-themes';
 
-export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
-}
+// styles
+import '@/styles/reset.css';
+
+const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => {
+  const client = useApollo(pageProps.initialApolloState);
+
+  return (
+    <ThemeProvider defaultTheme="system" attribute="class">
+      <Component {...pageProps} />
+    </ThemeProvider>
+  );
+};
+
+export default MyApp;
