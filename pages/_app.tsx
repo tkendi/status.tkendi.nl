@@ -5,8 +5,6 @@ import { ThemeProvider } from 'next-themes';
 import '@/styles/reset.css';
 
 const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => {
-  const client = useApollo(pageProps.initialApolloState);
-
   return (
     <ThemeProvider defaultTheme="system" attribute="class">
       <Component {...pageProps} />
