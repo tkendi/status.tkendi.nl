@@ -4,7 +4,7 @@ import { breakPoints } from '@/styles/breakPoints';
 export const Container = styled('div', {
   maxWidth: breakPoints.lg,
   padding: '0px 120px',
-  margin: "0 auto",
+  margin: '0 auto',
 
   '@me': {
     maxWidth: breakPoints.me,
