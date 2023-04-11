@@ -25,7 +25,7 @@ time, mark, audio, video {
 	vertical-align: baseline;
 	vertical-align: -webkit-baseline-middle;
 	vertical-align: -moz-middle-with-baseline;
-    font-family: 'SUIT Variable, sans-serif';
+    font-family: 'SUIT Variable', sans-serif;
 }
 
 /* make sure to set some focus styles for accessibility */

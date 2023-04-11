@@ -1,4 +1,19 @@
 {
-    "editor.codeActionsOnSave": { "source.fixAll.eslint": true },
-    "files.autoSave": "onFocusChange",
-} 
+    "editor.formatOnSave": false,
+    "[javascript]": {
+      "editor.formatOnSave": true
+    },
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    },
+    "vitest.include": [
+      "**/*.{test}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}"
+    ],
+    "vitest.exclude": [
+      "**/node_modules/**",
+      "**/dist/**",
+      "**/cypress/**",
+      "**/.{idea,git,cache,output,temp}/**",
+      "**/__e2e__/**"
+    ]
+  }

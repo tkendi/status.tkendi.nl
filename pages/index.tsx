@@ -1,13 +1,14 @@
 import { NextPage } from 'next';
 import React from 'react';
 
-import { Container } from '@/components/atoms/Container';
+import Layout from '@/components/molecules/Layout';
+import HomeTemplate from '@/components/templates/Home';
 
 const Home: NextPage = () => {
   return (
-    <Container>
-      <div style={{ border: '1px solid #fff' }}>Tkendi Status</div>
-    </Container>
+    <Layout>
+      <HomeTemplate />
+    </Layout>
   );
 };
 
