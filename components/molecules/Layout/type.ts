@@ -1,3 +1,3 @@
 export interface LayoutProps {
-  isHeaderShow: boolean;
+  isHeaderShow?: boolean;
 }
