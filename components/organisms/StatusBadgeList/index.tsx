@@ -17,8 +17,6 @@ const StatusBadgeList = () => {
     handleGeteHealthData();
   }, []);
 
-  console.log();
-
   return (
     <>
       {Object.entries(healthData)?.map(([key, value], index) => {
