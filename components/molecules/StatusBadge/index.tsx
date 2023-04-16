@@ -1,9 +1,15 @@
 import React from 'react';
 
 import { styled } from '@/styles/stitches.config';
+import { Text } from '@/components/atoms/Text';
 
-const StatusBadge = () => {
-  return <Wrap>StatusBadge</Wrap>;
+const StatusBadge = ({ title, status }: StatusBadgeProps) => {
+  return (
+    <Wrap>
+      <Text> {title}</Text>
+      <Text>{status}</Text>
+    </Wrap>
+  );
 };
 
 export default StatusBadge;
@@ -13,6 +19,7 @@ const Wrap = styled('div', {
   height: '45px',
   display: 'inline-grid',
   alignItems: 'center',
+  padding: '10px 15px',
   borderRadius: '7px',
   border: '1px solid #eeeeee',
   backgroundColor: '#fff',
