@@ -2,7 +2,7 @@ import { AppProps } from 'next/app';
 import { ThemeProvider } from 'next-themes';
 
 // styles
-import '@/styles/reset.css';
+import '@/styles/global.css';
 
 const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => {
   return (

@@ -1,5 +1,5 @@
-import axios from 'axios';
+import { healthCheckAxios } from './create';
 
 export const getFinanceHealth = () => {
-  return axios.get(`${process.env.NEXT_PUBLIC_FINANCE_API}`);
+  return healthCheckAxios.get(`${process.env.NEXT_PUBLIC_FINANCE_API}`);
 };

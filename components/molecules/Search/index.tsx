@@ -1,7 +1,7 @@
 import React from 'react';
 import { FiSearch } from 'react-icons/fi';
 
-import { styled } from '@/styles/stitches.config';
+import { SearchIconWrap, Wrap } from './style/index.style';
 
 const Search = () => {
   return (
@@ -14,17 +14,3 @@ const Search = () => {
 };
 
 export default Search;
-
-const Wrap = styled('div', {
-  height: 'max-content',
-});
-
-const SearchIconWrap = styled('div', {
-  width: '25px',
-  height: '25px',
-  padding: '8px',
-  borderRadius: '50%',
-  backgroundColor: '#000000',
-});
-
-const Input = styled('input', {});

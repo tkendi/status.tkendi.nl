@@ -1,8 +1,7 @@
 import React from 'react';
 
-import { LayoutStyled } from './styled';
+import { LayoutStyled } from './style/index.style';
 import Header from '../Header';
-import { LayoutProps } from './type';
 
 const Layout = ({
   children,
