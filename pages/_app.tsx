@@ -9,7 +9,7 @@ const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => {
   return (
     <>
       <Head>
-        <title>Tkendi Status</title>
+        <title>Status</title>
       </Head>
       <ThemeProvider defaultTheme="system" attribute="class">
         <Component {...pageProps} />
