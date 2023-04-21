@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@stitches/react": "^1.2.8",
+    "@trpc/client": "^10.21.1",
     "@types/axios": "^0.14.0",
     "@types/node": "18.15.11",
     "@types/react": "18.0.33",

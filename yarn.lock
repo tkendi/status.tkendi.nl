@@ -167,6 +167,11 @@
   dependencies:
     tslib "^2.4.0"
 
+"@trpc/client@^10.21.1":
+  version "10.21.1"
+  resolved "https://registry.yarnpkg.com/@trpc/client/-/client-10.21.1.tgz#1cc86ffddaabd7368b43b50070f2ca98bbfc460d"
+  integrity sha512-oZgPbghs9y2frTCA9mZPSAlVknV9stCTKYO5nsvRr0aX+oaA0URoXJTKZTSpLZxLfuwWgxBj4iTiCWWWmaVelw==
+
 "@types/axios@^0.14.0":
   version "0.14.0"
   resolved "https://registry.yarnpkg.com/@types/axios/-/axios-0.14.0.tgz#ec2300fbe7d7dddd7eb9d3abf87999964cafce46"
