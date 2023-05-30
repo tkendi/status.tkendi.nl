@@ -1,0 +1,6 @@
+# graphql-let
+.cache
+/types/__generated__
+
+# next
+next-env.d.ts

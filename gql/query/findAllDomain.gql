@@ -1,0 +1,7 @@
+query FindAllDomain {
+  findAllDomain {
+    code
+    createdAt
+    domain
+  }
+}

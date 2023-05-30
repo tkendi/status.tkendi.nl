@@ -2,15 +2,17 @@ import React, { useCallback, useEffect, useState } from 'react';
 
 import { getFinanceHealth } from '@/api/finance';
 import StatusBadge from '@/components/molecules/StatusBadge';
+import { useFindAllDomainQuery } from '@/gql/generated';
 
 import { Wrap } from './styles/index.style';
 
 const StatusBadgeList = () => {
+  const { data } = useFindAllDomainQuery();
   const [healthData, setHealthData] = useState<healthDataState>({});
 
   const handleGeteHealthData = useCallback(async () => {
     const { status } = await getFinanceHealth();
-    setHealthData({ finance: status });
+    setHealthData({ financeApi: status });
   }, []);
 
   useEffect(() => {

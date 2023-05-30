@@ -1,6 +1,12 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
+module.exports = {
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  webpack(config, options) {
+    config.module.rules.push({
+      test: /\.graphql$/u,
+      use: [options.defaultLoaders.babel, { loader: 'graphql-tag/loader' }],
+    });
+    return config;
+  },
 };
-
-module.exports = nextConfig;

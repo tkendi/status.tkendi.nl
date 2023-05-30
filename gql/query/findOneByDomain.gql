@@ -1,0 +1,6 @@
+query FindOneByOne($checlyOneDomain: ChecklyDomainInput!) {
+  findOneByOne(checlyOneDomain: $checlyOneDomain) {
+    code
+    createdAt
+  }
+}
