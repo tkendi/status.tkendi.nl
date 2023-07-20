@@ -1,0 +1,3 @@
+$ yarn env:copy && yarn graphql:codegen && next build
+$ cp .env .env.local
+$ DOTENV_CONFIG_PATH=.env.local graphql-codegen -r dotenv/config
