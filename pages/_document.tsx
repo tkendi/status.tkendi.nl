@@ -1,4 +1,3 @@
-import React, { Children } from 'react';
 import Document, {
   Html,
   Head,
@@ -6,6 +5,7 @@ import Document, {
   NextScript,
   DocumentContext,
 } from 'next/document';
+import React, { Children } from 'react';
 
 import { getCssText } from '@/styles/stitches.config';
 

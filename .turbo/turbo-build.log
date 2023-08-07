@@ -1,0 +1,26 @@
+
+> status@0.1.0 build /Users/tkendi/Github/monorepo/apps/status
+> yarn env:copy && yarn graphql:codegen && next build
+
+yarn run v1.22.19
+$ cp .env .env.local
+Done in 0.04s.
+yarn run v1.22.19
+$ DOTENV_CONFIG_PATH=.env.local graphql-codegen -r dotenv/config
+[STARTED] Parse Configuration
+[SUCCESS] Parse Configuration
+[STARTED] Generate outputs
+[STARTED] Generate to gql/generated.ts
+[STARTED] Load GraphQL schemas
+[SUCCESS] Load GraphQL schemas
+[STARTED] Load GraphQL documents
+[SUCCESS] Load GraphQL documents
+[STARTED] Generate
+[SUCCESS] Generate
+[SUCCESS] Generate to gql/generated.ts
+[SUCCESS] Generate outputs
+Done in 2.02s.
+- info Loaded env from /Users/tkendi/Github/monorepo/apps/status/.env.local
+- info Loaded env from /Users/tkendi/Github/monorepo/apps/status/.env
+- info Skipping linting
+- info Checking validity of types...
