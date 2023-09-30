@@ -7,7 +7,7 @@ import { LayoutStyled } from './style/index.style';
 const Layout = ({
   children,
   isHeaderShow = true,
-}: React.PropsWithChildren<LayoutProps>) => {
+}: LayoutProps) => {
   return (
     <LayoutStyled>
       {isHeaderShow && <Header />}

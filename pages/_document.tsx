@@ -10,7 +10,8 @@ import React, { Children } from 'react';
 import { getCssText } from '@/styles/stitches.config';
 
 class MyDocument extends Document {
-  static async getInitialProps(ctx: DocumentContext) {
+
+  async getInitialProps(ctx: DocumentContext) {
     const initialProps = await Document.getInitialProps(ctx);
     return {
       ...initialProps,
