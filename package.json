@@ -8,6 +8,8 @@
     "env:copy": "cp .env .env.local",
     "graphql": "DOTENV_CONFIG_PATH=.env.local graphql-let -r dotenv/config",
     "graphql:codegen": "DOTENV_CONFIG_PATH=.env.local graphql-codegen -r dotenv/config",
+    "vercel": "pnpm vercel:link && vercel --cwd ../..",
+    "vercel:link": "cd apps/status && mkdir -p .git && touch .git/config && vercel link --scope tkendi --yes && cp -R .vercel ../../../..",
     "start": "next start",
     "lint": "next lint --fix"
   },
