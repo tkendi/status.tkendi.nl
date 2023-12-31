@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "yarn env:copy && yarn graphql:codegen && next dev",
-    "build": "yarn env:copy && yarn graphql:codegen && next build",
+    "dev": "pnpm env:copy && pnpm graphql:codegen && next dev",
+    "build": "pnpm env:copy && pnpm graphql:codegen && next build",
     "env:copy": "cp .env .env.local",
     "graphql": "DOTENV_CONFIG_PATH=.env.local graphql-let -r dotenv/config",
     "graphql:codegen": "DOTENV_CONFIG_PATH=.env.local graphql-codegen -r dotenv/config",
