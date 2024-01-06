@@ -1,13 +1,13 @@
 // styles
-import '@/styles/global.css';
+import "@/styles/global.css";
 
-import { ApolloProvider } from '@apollo/client';
-import { AppProps } from 'next/app';
-import Head from 'next/head';
-import { ThemeProvider } from 'next-themes';
+import { ApolloProvider } from "@apollo/client";
+import { AppProps } from "next/app";
+import Head from "next/head";
+import { ThemeProvider } from "next-themes";
 
-import { useApollo } from '@/gql/apollo';
-import { themes } from '@/styles/theme';
+import { useApollo } from "@/gql/apollo";
+import { themes } from "@/styles/theme";
 
 const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => {
   const client = useApollo(pageProps.initialApolloState);

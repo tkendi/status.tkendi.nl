@@ -1,3 +1,3 @@
-import { styled } from '@/styles/stitches.config';
+import { styled } from "@/styles/stitches.config";
 
-export const LayoutStyled = styled('div', {});
+export const LayoutStyled = styled("div", {});

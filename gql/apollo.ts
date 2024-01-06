@@ -1,11 +1,11 @@
-import fetch from 'cross-fetch';
-import merge from 'deepmerge';
-import { useMemo } from 'react';
-import isEqual from 'lodash/isEqual';
-import { ApolloClient, InMemoryCache } from '@apollo/client/core';
-import { from } from '@apollo/client/link/core';
-import { onError } from '@apollo/client/link/error';
-import { HttpLink } from '@apollo/client/link/http';
+import fetch from "cross-fetch";
+import merge from "deepmerge";
+import { useMemo } from "react";
+import isEqual from "lodash/isEqual";
+import { ApolloClient, InMemoryCache } from "@apollo/client/core";
+import { from } from "@apollo/client/link/core";
+import { onError } from "@apollo/client/link/error";
+import { HttpLink } from "@apollo/client/link/http";
 
 const httpLink = new HttpLink({
   uri: process.env.NEXT_PUBLIC_GRAPHQL_BASE_URL,
@@ -17,7 +17,7 @@ const errorLink = onError(
     if (graphQLErrors) {
       for (const { extensions } of graphQLErrors) {
         switch (extensions.code) {
-          case '401': {
+          case "401": {
           }
         }
       }
@@ -27,12 +27,12 @@ const errorLink = onError(
 
 const createApolloClient = () => {
   return new ApolloClient({
-    ssrMode: typeof window === 'undefined',
+    ssrMode: typeof window === "undefined",
     link: from([errorLink, httpLink]),
     cache: new InMemoryCache(),
     defaultOptions: {
       watchQuery: {
-        fetchPolicy: 'network-only',
+        fetchPolicy: "network-only",
       },
     },
   });
@@ -51,16 +51,14 @@ export const initializeApollo = (initialState = null): Apollo => {
     const data = merge(existingCache, initialState, {
       arrayMerge: (destinationArray, sourceArray) => [
         ...sourceArray,
-        ...destinationArray.filter((d) =>
-          sourceArray.every((s) => !isEqual(d, s)),
-        ),
+        ...destinationArray.filter(d => sourceArray.every(s => !isEqual(d, s))),
       ],
     });
 
     _apolloClient.cache.restore(data);
   }
   // ssg or ssr always create a new apollo client
-  if (typeof window === 'undefined') return _apolloClient;
+  if (typeof window === "undefined") return _apolloClient;
 
   // create the apollo client once in the client
   if (!apolloClient) apolloClient = _apolloClient;

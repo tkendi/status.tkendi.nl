@@ -1,4 +1,4 @@
-import { CodegenConfig } from '@graphql-codegen/cli';
+import { CodegenConfig } from "@graphql-codegen/cli";
 
 const envConfig: string[] = [
   process.env.NEXT_PUBLIC_GRAPHQL_BASE_URL,
@@ -7,13 +7,13 @@ const envConfig: string[] = [
 const config: CodegenConfig = {
   overwrite: true,
   schema: envConfig,
-  documents: '**/*.gql',
+  documents: "**/*.gql",
   generates: {
-    'gql/generated.ts': {
+    "gql/generated.ts": {
       plugins: [
-        'typescript',
-        'typescript-operations',
-        'typescript-react-apollo',
+        "typescript",
+        "typescript-operations",
+        "typescript-react-apollo",
       ],
       config: {
         preResolveTypes: {
@@ -24,8 +24,8 @@ const config: CodegenConfig = {
   },
   config: {
     scalars: {
-      Date: 'string',
-      DateTime: 'string',
+      Date: "string",
+      DateTime: "string",
     },
     enumsAsTypes: true,
   },

@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 
-import { Container } from '@/components/atoms/Container';
-import StatusBadgeList from '@/components/organisms/StatusBadgeList';
+import { Container } from "@/components/atoms/Container";
+import StatusBadgeList from "@/components/organisms/StatusBadgeList";
 
 const HomeTemplate = () => {
   return (

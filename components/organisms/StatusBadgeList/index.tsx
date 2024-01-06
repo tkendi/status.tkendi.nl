@@ -1,11 +1,10 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from "react";
 
-import { Wrap } from './styles/index.style';
+import { Wrap } from "./styles/index.style";
 
-import { getFinanceHealth } from '@/api/finance';
-import StatusBadge from '@/components/molecules/StatusBadge';
-import { useFindAllDomainQuery } from '@/gql/generated';
-
+import { getFinanceHealth } from "@/api/finance";
+import StatusBadge from "@/components/molecules/StatusBadge";
+import { useFindAllDomainQuery } from "@/gql/generated";
 
 const StatusBadgeList = () => {
   const { data } = useFindAllDomainQuery();

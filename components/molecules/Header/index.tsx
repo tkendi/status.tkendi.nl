@@ -1,13 +1,13 @@
-import { Dosis } from 'next/font/google';
-import React from 'react';
+import { Dosis } from "next/font/google";
+import React from "react";
 
-import Search from '../Search';
+import Search from "../Search";
 
-import { LogoBox, LogoText, Wrap } from './style/index.style';
+import { LogoBox, LogoText, Wrap } from "./style/index.style";
 
 const dosis = Dosis({
-  subsets: ['latin'],
-  variable: '--dosis-font',
+  subsets: ["latin"],
+  variable: "--dosis-font",
 });
 
 const Header = () => {

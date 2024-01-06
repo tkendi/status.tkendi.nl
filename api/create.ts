@@ -1,7 +1,7 @@
-import axios from 'axios';
+import axios from "axios";
 
 export const healthCheckAxios = axios.create({
   headers: {
-    'Cache-Control': 'no-cache',
+    "Cache-Control": "no-cache",
   },
 });

@@ -4,13 +4,12 @@ import Document, {
   Main,
   NextScript,
   DocumentContext,
-} from 'next/document';
-import React, { Children } from 'react';
+} from "next/document";
+import React, { Children } from "react";
 
-import { getCssText } from '@/styles/stitches.config';
+import { getCssText } from "@/styles/stitches.config";
 
 class MyDocument extends Document {
-
   async getInitialProps(ctx: DocumentContext) {
     const initialProps = await Document.getInitialProps(ctx);
     return {
